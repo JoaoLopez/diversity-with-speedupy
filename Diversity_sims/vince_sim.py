@@ -22,7 +22,7 @@ def count_shared_mutations(sims):
     i = 0
     for p1, p2 in combinations(sims, 2):
         if i % 10000000 == 0:
-            print "\ttotal pairs counted: %d\n" % i,
+            print("\ttotal pairs counted: %d\n" % i,)
         i += 1
         num_shared = len(set(p1).intersection(set(p2)))
         counts[num_shared] += num_shared
@@ -33,5 +33,5 @@ if __name__ == "__main__":
     t1 = dt.datetime.now()
     shared_counts = count_shared_mutations(x)
     t2 = dt.datetime.now()
-    print "took", (t2 - t1).seconds, "seconds to do pairwise comparisons"
-    print shared_counts
+    print("took", (t2 - t1).seconds, "seconds to do pairwise comparisons")
+    print(shared_counts)
